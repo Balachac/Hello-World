@@ -33,6 +33,7 @@ print ("value of pi is " + str(pi))
 print (r'x\nx')
 print (len(r'x\nx'))
 
+#floor division
 print (9999//9998)
 
 s = "UPPER"
@@ -107,6 +108,99 @@ else:
 
 t = tuple(str_join)
 print(t)
+#print the first element in the tuple t
+print (t[1])
+#print the third through sixth element in t
+print(t[2:6])
+#replace the tuple with another with the help of + operator (note that tuples are immutable so cannot change an element)
+t = ('A',)+t[1:]
+print (t)
+#revert t to original list
+t = ('P',)+t[1:]
+print (t)
 
+#dictionaries
+eng2ita = {'ciao':'hi', 'grazie':'thanks', 'niente':'nothing', 'ieri':'yesterday', 'notte':'night'}
+#recall key values
+eng2ita['grazie']
+#delete keys
+inventory = {'apples':'234', 'oranges':'345', 'pears':'123', 'bananas':'321'}
+print(inventory)
+#update the inventory when all pears are purchased
+inventory['pears']=0
+#remove pears from inventory as you are not planning to restock
+del inventory['pears']
+print(inventory)
+len(inventory)
+'pears' in inventory
+#get key values and sort
+inventory.get('bananas',0)
+inventory.get('pears',0)
+sorted(inventory)
 
+#if else statements
+i = 19
+if i<12:
+    print("i is smaller than 12")
+if i<15:
+    print("i is smaller than 15")
+else:
+    print("i is greater than 15")
+
+#while loop
+i = 0
+while i<10:
+    print(i, end=" ")
+    i = i+1
+#write a simple program to tag even and odd numbers up to a given number
+i=0
+while i<10:
+    if i%2==0:
+        print("The number "+str(i)+" is even")
+    else:
+        print("The number "+str(i)+" is odd")
+    i=i+1
 print("end")
+
+#for loops
+languages = ["Python", "R", "Scala", "Julia", "Java"]
+for index in range(len(languages)):
+    print("The current language is ", languages[index])
+
+#nested loops
+n = 20
+for i in range(n):
+    for j in range(i):
+        print("*", end="  ")
+    print("  ")
+for i in range(n,1,-1):
+    for j in range(i):
+        print("*", end="  ")
+    print("  ")
+
+#There exists a more efficient way to produce the same result using single loop
+n=20
+for i in range(n):
+    print(" * "*i)
+for i in range(n,1,-1):
+    print(" * "*i)
+
+#try another symbol
+n = 10
+for i in range(n):
+    for j in range(i):
+        print("\_(^_^)_/", end="  ")
+    print("  ")
+for i in range(n,1,-1):
+    for j in range(i):
+        print("\_(^_^)_/", end="  ")
+    print("  ")
+
+#take user input
+print("what is your name?")
+myName = input()
+print("It is nice to meet you, " + myName+"!")
+#user input is always returned in string. Use int() function to pass the value to an arithmetic operation
+spam = input()
+print(spam)
+print(int(spam)*2)
